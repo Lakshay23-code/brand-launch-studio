@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brand Launch Studio website
 
-## Getting Started
+Next.js website for a brand-launch service for nutraceutical, skincare and wellness founders.
 
-First, run the development server:
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Change the business details
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Everything (business name, email, WhatsApp number, social links, domain) lives in
+`src/site.config.ts`. Search the project for `TODO` to find every placeholder to replace,
+including the case studies in `src/app/case-studies/page.tsx`.
 
-## Learn More
+## Add a blog post
 
-To learn more about Next.js, take a look at the following resources:
+Create one `.mdx` file in `src/content/blog/`. The file name becomes the URL
+(`my-post.mdx` → `/blog/my-post`). Start the file with its metadata:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```mdx
+export const metadata = {
+  title: "Post title (under 60 characters works best for Google)",
+  description: "One or two sentences for Google results and social previews (under 160 characters).",
+  date: "2026-11-10",
+  author: "Brand Launch Studio",
+};
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Your post starts here, written in Markdown. Use ## for section headings.
+```
 
-## Deploy on Vercel
+The blog index, home page, sitemap and structured data pick up new posts automatically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Content rules for health and beauty posts: no claims that a product cures, treats or
+prevents a disease, and no prescription medicines.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+1. Import this repository at https://vercel.com/new (the free plan is enough).
+2. Every push to `main` deploys automatically.
+3. Add your domain in Vercel, then update `url` in `src/site.config.ts`.
+4. Verify the site in Google Search Console and submit `https://your-domain/sitemap.xml`.
+
+## SEO already set up
+
+- Static pages and blog posts, fast to load and easy for Google to read
+- A unique title, description and canonical URL on every page
+- `sitemap.xml` and `robots.txt`, generated automatically
+- Structured data: ProfessionalService (all pages), FAQPage (services), Article (blog posts)
+- A generated Open Graph image for link previews on WhatsApp, LinkedIn and Facebook
