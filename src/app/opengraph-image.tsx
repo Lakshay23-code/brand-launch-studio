@@ -24,10 +24,14 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <svg width="64" height="64" viewBox="0 0 64 64">
             <rect width="64" height="64" rx="15" fill="#FFFFFF" />
-            <rect x="23" y="13" width="18" height="7" rx="2.5" fill="#141C3F" />
-            <rect x="18" y="19" width="28" height="28" rx="7" fill="#141C3F" />
-            <rect x="18" y="28" width="28" height="9" fill="#E8A13A" />
-            <rect x="9" y="47" width="46" height="5" rx="2.5" fill="#E8A13A" />
+            <rect x="15" y="12" width="5" height="9" rx="2.5" fill="#141C3F" />
+            <rect x="13" y="19" width="9" height="5" rx="1.5" fill="#141C3F" />
+            <rect x="10" y="23" width="15" height="24" rx="4" fill="#141C3F" />
+            <rect x="28" y="31" width="17" height="5" rx="2" fill="#141C3F" />
+            <rect x="29" y="35" width="15" height="12" rx="3.5" fill="#141C3F" />
+            <rect x="29" y="39" width="15" height="3" fill="#FFFFFF" />
+            <path d="M54 47c-7 0-9.5-7-7.5-16 6.5 2 9.5 8.5 7.5 16z" fill="#141C3F" />
+            <rect x="7" y="47" width="50" height="5" rx="2.5" fill="#E8A13A" />
           </svg>
           <div style={{ fontSize: 44, fontWeight: 800, letterSpacing: -1 }}>shelfkar</div>
         </div>
