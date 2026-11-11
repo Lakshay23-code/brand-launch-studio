@@ -1,12 +1,13 @@
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 import { nav, site, whatsappLink } from "@/site.config";
 
 export function SiteHeader() {
   return (
     <header className="border-b border-mist bg-paper/90 backdrop-blur supports-[backdrop-filter]:bg-paper/75 sticky top-0 z-40">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-5 py-4">
-        <Link href="/" className="font-display text-lg font-bold tracking-tight text-ink">
-          {site.name}
+        <Link href="/" aria-label={`${site.name} home`}>
+          <Logo />
         </Link>
         <nav aria-label="Main" className="order-3 w-full sm:order-none sm:w-auto">
           <ul className="flex gap-5 overflow-x-auto text-[15px] text-ink-soft">

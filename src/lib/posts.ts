@@ -9,7 +9,7 @@ import path from "node:path";
 //   title: "How to choose a supplement manufacturer",
 //   description: "One or two sentences for Google and social previews.",
 //   date: "2026-11-10",
-//   author: "Brand Launch Studio",
+//   author: "Shelfkar",
 // };
 
 export type PostMeta = {

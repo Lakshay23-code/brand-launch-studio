@@ -1,4 +1,4 @@
-# Brand Launch Studio website
+# Shelfkar website
 
 Next.js website for a brand-launch service for nutraceutical, skincare and wellness founders.
 
@@ -17,6 +17,39 @@ Everything (business name, email, WhatsApp number, social links, domain) lives i
 `src/site.config.ts`. Search the project for `TODO` to find every placeholder to replace,
 including the case studies in `src/app/case-studies/page.tsx`.
 
+The founder's name and story (home page and About page) are in the `founder` section of the
+same file.
+
+## Add your photos
+
+Real photos make the site feel genuine. Until you add them, matching illustrations are shown.
+
+1. Put the photo in `public/photos/`, for example `public/photos/founder.jpg`.
+2. In `src/site.config.ts`, set its slot in `photos`, for example `founder: "/photos/founder.jpg"`.
+
+| Slot | Where it shows | What works best |
+| --- | --- | --- |
+| `founder` | Home page and About page | A clear, well-lit photo of you, square or portrait |
+| `factory` | "Build" step on the home page | A factory visit: production line, lab or packing area |
+| `packaging` | "Launch" step on the home page | Samples, labels or finished packs from a brand you worked on |
+| `launch` | "Grow" step on the home page | A product shoot, a marketplace listing or a launch post |
+
+Landscape photos for the three steps are cropped to 4:3. Get permission before showing a
+manufacturer's factory or a client's product.
+
+## Brand files
+
+`public/brand/` holds the logo for use outside the website:
+
+- `shelfkar-profile-picture.png`: Instagram, Facebook, WhatsApp Business and LinkedIn profile picture
+- `shelfkar-logo.png`: full logo for light backgrounds (transparent PNG)
+- `shelfkar-logo-white.png`: full logo for dark backgrounds (transparent PNG)
+- `shelfkar-mark.svg`: the mark on its own, as a vector file for Canva or a printer
+
+Brand colours: indigo `#141C3F`, saffron `#E8A13A`, leaf green `#2F6B4F`, mist `#DDE3EC`,
+background `#F5F6F8`. Fonts: Bricolage Grotesque (headings and logo) and Atkinson Hyperlegible
+(body text), both free on Google Fonts.
+
 ## Add a blog post
 
 Create one `.mdx` file in `src/content/blog/`. The file name becomes the URL
@@ -27,7 +60,7 @@ export const metadata = {
   title: "Post title (under 60 characters works best for Google)",
   description: "One or two sentences for Google results and social previews (under 160 characters).",
   date: "2026-11-10",
-  author: "Brand Launch Studio",
+  author: "Shelfkar",
 };
 
 Your post starts here, written in Markdown. Use ## for section headings.

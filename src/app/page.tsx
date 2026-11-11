@@ -2,8 +2,33 @@ import Link from "next/link";
 import { LabelPreview } from "@/components/label-preview";
 import { CallToAction } from "@/components/call-to-action";
 import { categories, stages, stuckPoints } from "@/content/services";
+import { PhotoSlot } from "@/components/photo-slot";
+import {
+  FactoryIllustration,
+  FounderPlaceholder,
+  LaunchIllustration,
+  PackagingIllustration,
+} from "@/components/illustrations";
 import { getAllPosts, formatDate } from "@/lib/posts";
-import { whatsappLink } from "@/site.config";
+import { founder, photos, whatsappLink } from "@/site.config";
+
+const stageVisuals = {
+  build: {
+    src: photos.factory,
+    alt: "A manufacturing partner's production line",
+    art: <FactoryIllustration className="h-full w-full" title="A production line filling supplement jars" />,
+  },
+  launch: {
+    src: photos.packaging,
+    alt: "Packaging and labels designed for a client brand",
+    art: <PackagingIllustration className="h-full w-full" title="Packaging: a serum bottle, a jar and a shipping box" />,
+  },
+  grow: {
+    src: photos.launch,
+    alt: "A client brand's launch on social media",
+    art: <LaunchIllustration className="h-full w-full" title="A brand's Instagram page with new order notifications" />,
+  },
+} as const;
 
 export default async function Home() {
   const posts = (await getAllPosts()).slice(0, 3);
@@ -71,6 +96,12 @@ export default async function Home() {
         <ol className="mt-12 grid gap-8 md:grid-cols-3">
           {stages.map((s, i) => (
             <li key={s.slug} className="relative">
+              <PhotoSlot
+                src={stageVisuals[s.slug].src}
+                alt={stageVisuals[s.slug].alt}
+                fallback={stageVisuals[s.slug].art}
+                className="mb-6 aspect-[4/3]"
+              />
               <div className="flex items-center gap-3">
                 <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink font-display text-lg font-bold text-white">
                   {i + 1}
@@ -97,6 +128,35 @@ export default async function Home() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* The person behind it */}
+      <section className="mx-auto max-w-6xl px-5 pt-20">
+        <div className="grid items-center gap-10 md:grid-cols-[minmax(0,20rem)_1fr]">
+          <PhotoSlot
+            src={photos.founder}
+            alt={`${founder.name}, ${founder.role}`}
+            fallback={<FounderPlaceholder name={founder.name} className="h-full w-full" />}
+            className="aspect-square w-full max-w-xs"
+            sizes="20rem"
+          />
+          <div>
+            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+              You work directly with the founder
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">{founder.story.at(0)}</p>
+            <p className="mt-4 font-bold text-ink">
+              {founder.name}
+              <span className="block font-normal text-ink-soft">{founder.role}</span>
+            </p>
+            <Link
+              href="/about"
+              className="mt-6 inline-block font-bold underline decoration-saffron decoration-2 underline-offset-4"
+            >
+              Read the full story
+            </Link>
+          </div>
         </div>
       </section>
 

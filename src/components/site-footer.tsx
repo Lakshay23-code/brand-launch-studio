@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 import { nav, site } from "@/site.config";
 
 export function SiteFooter() {
@@ -6,8 +7,14 @@ export function SiteFooter() {
     <footer className="mt-24 bg-ink text-mist">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-3">
         <div>
-          <p className="font-display text-xl font-bold text-white">{site.name}</p>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed">{site.tagline}</p>
+          <Logo reversed />
+          <p className="mt-4 max-w-xs text-sm leading-relaxed">{site.tagline}</p>
+          {(site.city || site.gstin) && (
+            <p className="mt-4 space-y-1 text-sm">
+              {site.city && <span className="block">{site.city}, India</span>}
+              {site.gstin && <span className="block">GSTIN {site.gstin}</span>}
+            </p>
+          )}
         </div>
         <nav aria-label="Footer">
           <p className="text-sm font-bold text-white">Pages</p>
