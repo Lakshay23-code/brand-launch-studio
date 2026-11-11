@@ -14,7 +14,7 @@ export default async function BlogIndex() {
 
   return (
     <section className="mx-auto max-w-3xl px-5 pt-14">
-      <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Guides for new founders</h1>
+      <h1 className="font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.025em] sm:text-[3.2rem]">Guides for new founders</h1>
       <p className="mt-5 text-lg leading-relaxed text-ink-soft">
         What we&rsquo;ve learned launching nutraceutical, skincare and wellness brands, written down.
       </p>

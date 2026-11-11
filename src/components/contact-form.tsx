@@ -76,7 +76,7 @@ export function ContactForm() {
         </p>
       )}
       <div className="flex flex-wrap items-center gap-4">
-        <button type="submit" className="rounded-full bg-saffron px-6 py-3 font-bold text-ink hover:bg-saffron-deep hover:text-white">
+        <button type="submit" className="rounded-lg bg-saffron px-6 py-3.5 font-bold text-ink hover:bg-saffron-deep hover:text-white">
           Send on WhatsApp
         </button>
         <span className="text-sm text-ink-soft">

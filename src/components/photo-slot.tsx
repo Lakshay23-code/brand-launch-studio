@@ -19,7 +19,7 @@ export function PhotoSlot({
   priority?: boolean;
 }) {
   return (
-    <div className={`relative overflow-hidden rounded-[28px] ${className}`}>
+    <div className={`relative overflow-hidden rounded-2xl ${className}`}>
       {src ? (
         <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className="object-cover" />
       ) : (

@@ -48,7 +48,7 @@ export default function ServicesPage() {
         }}
       />
       <section className="mx-auto max-w-6xl px-5 pb-12 pt-14">
-        <h1 className="max-w-3xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+        <h1 className="max-w-3xl font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.025em] sm:text-[3.2rem]">
           From product idea to your first sales, in three stages
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
@@ -63,7 +63,7 @@ export default function ServicesPage() {
             <li
               key={s.slug}
               id={s.slug}
-              className="grid gap-6 rounded-3xl border border-mist bg-white p-6 sm:p-10 lg:grid-cols-[1fr_1.4fr]"
+              className="grid gap-6 rounded-2xl border border-mist bg-white p-6 sm:p-10 lg:grid-cols-[1fr_1.4fr]"
             >
               <div>
                 <p className="font-display text-sm font-bold text-saffron-deep">

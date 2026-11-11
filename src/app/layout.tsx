@@ -5,6 +5,7 @@ import { site } from "@/site.config";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { JsonLd } from "@/components/json-ld";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 // Fonts are self-hosted from src/fonts (both are open-source, SIL Open Font Licence).
 const bricolage = localFont({
@@ -82,6 +83,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <SiteFooter />
+        <WhatsAppButton />
       </body>
     </html>
   );

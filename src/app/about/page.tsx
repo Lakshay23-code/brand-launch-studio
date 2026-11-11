@@ -34,7 +34,7 @@ export default function AboutPage() {
     <>
       <section className="mx-auto grid max-w-6xl gap-12 px-5 pt-14 md:grid-cols-[1.3fr_1fr] md:items-start">
         <div>
-          <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+          <h1 className="font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.025em] sm:text-[3.2rem]">
             Built by someone who&rsquo;s been on the factory floor
           </h1>
           <div className="mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-ink-soft">

@@ -53,7 +53,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
         <Link href="/blog" className="text-sm text-ink-soft underline underline-offset-4 hover:text-ink">
           All guides
         </Link>
-        <h1 className="mt-6 font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+        <h1 className="mt-6 font-display text-[2.3rem] font-bold leading-[1.1] tracking-[-0.025em] sm:text-[3rem]">
           {post.title}
         </h1>
         <p className="mt-4 text-sm text-ink-soft">

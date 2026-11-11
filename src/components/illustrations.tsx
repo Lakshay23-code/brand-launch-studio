@@ -16,12 +16,12 @@ export function FactoryIllustration({ className, title }: Props) {
     <svg viewBox="0 0 480 360" className={className} role="img" aria-label={title}>
       <defs>
         <clipPath id="ill-factory-clip">
-          <rect width="480" height="360" rx="28" />
+          <rect width="480" height="360" />
         </clipPath>
       </defs>
       <g clipPath="url(#ill-factory-clip)">
-        <rect width="480" height="360" fill="#E7ECF3" />
-        <rect y="300" width="480" height="60" fill={MIST} />
+        <rect width="480" height="360" fill="#EEF1F5" />
+        <rect y="300" width="480" height="60" fill="#E2E7EE" />
         {/* window */}
         <rect x="320" y="44" width="120" height="84" rx="10" fill={WHITE} stroke={INK} strokeWidth="3" />
         <path d="M380 44v84M320 86h120" stroke={INK} strokeWidth="3" />
@@ -71,12 +71,12 @@ export function PackagingIllustration({ className, title }: Props) {
     <svg viewBox="0 0 480 360" className={className} role="img" aria-label={title}>
       <defs>
         <clipPath id="ill-pack-clip">
-          <rect width="480" height="360" rx="28" />
+          <rect width="480" height="360" />
         </clipPath>
       </defs>
       <g clipPath="url(#ill-pack-clip)">
-        <rect width="480" height="360" fill="#F6ECDC" />
-        <rect y="272" width="480" height="88" fill="#EBD8BA" />
+        <rect width="480" height="360" fill="#EEF1F5" />
+        <rect y="272" width="480" height="88" fill="#E2E7EE" />
         {/* colour swatch card */}
         <g transform="rotate(-6 120 100)">
           <rect x="56" y="58" width="132" height="86" rx="10" fill={WHITE} stroke={INK} strokeWidth="3" />
@@ -117,11 +117,11 @@ export function LaunchIllustration({ className, title }: Props) {
     <svg viewBox="0 0 480 360" className={className} role="img" aria-label={title}>
       <defs>
         <clipPath id="ill-launch-clip">
-          <rect width="480" height="360" rx="28" />
+          <rect width="480" height="360" />
         </clipPath>
       </defs>
       <g clipPath="url(#ill-launch-clip)">
-        <rect width="480" height="360" fill="#E3EEE8" />
+        <rect width="480" height="360" fill="#EEF1F5" />
         {/* phone */}
         <rect x="160" y="28" width="160" height="320" rx="26" fill={INK} />
         <rect x="170" y="46" width="140" height="290" rx="16" fill={WHITE} />
@@ -190,10 +190,17 @@ export function FounderPlaceholder({ name, className }: { name: string; classNam
     .join("");
   return (
     <div
-      className={`flex items-center justify-center bg-saffron font-display font-extrabold text-ink ${className ?? ""}`}
+      className={`relative flex items-end justify-center overflow-hidden bg-[#EEF1F5] ${className ?? ""}`}
       aria-hidden="true"
     >
-      <span className="text-6xl tracking-tight">{initials}</span>
+      {/* a quiet portrait silhouette until a real photo is added */}
+      <svg viewBox="0 0 200 250" className="absolute inset-x-0 bottom-0 h-[82%] w-full" preserveAspectRatio="xMidYMax meet">
+        <circle cx="100" cy="92" r="46" fill="#DDE3EC" />
+        <path d="M22 250c0-52 35-86 78-86s78 34 78 86z" fill="#DDE3EC" />
+      </svg>
+      <span className="absolute left-5 top-5 rounded-md bg-white px-2.5 py-1 font-display text-sm font-bold tracking-[-0.01em] text-ink-soft">
+        {initials}
+      </span>
     </div>
   );
 }

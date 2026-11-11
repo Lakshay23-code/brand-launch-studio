@@ -44,7 +44,7 @@ manufacturer's factory or a client's product.
 - `shelfkar-profile-picture.png`: Instagram, Facebook, WhatsApp Business and LinkedIn profile picture
 - `shelfkar-logo.png`: full logo for light backgrounds (transparent PNG)
 - `shelfkar-logo-white.png`: full logo for dark backgrounds (transparent PNG)
-- `shelfkar-mark.svg`: the mark on its own, as a vector file for Canva or a printer
+- `shelfkar-mark.svg` and `shelfkar-mark-white.svg`: the mark on its own, as vector files for Canva or a printer
 
 Brand colours: indigo `#141C3F`, saffron `#E8A13A`, leaf green `#2F6B4F`, mist `#DDE3EC`,
 background `#F5F6F8`. Fonts: Bricolage Grotesque (headings and logo) and Atkinson Hyperlegible

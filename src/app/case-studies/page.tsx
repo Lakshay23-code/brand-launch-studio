@@ -49,7 +49,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <section className="mx-auto max-w-6xl px-5 pb-12 pt-14">
-        <h1 className="max-w-3xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
+        <h1 className="max-w-3xl font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.025em] sm:text-[3.2rem]">
           Brands we&rsquo;ve built and run
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
@@ -59,7 +59,7 @@ export default function CaseStudiesPage() {
 
       <section className="mx-auto max-w-6xl space-y-8 px-5">
         {caseStudies.map((c) => (
-          <article key={c.brand} className="rounded-3xl border border-mist bg-white p-6 sm:p-10">
+          <article key={c.brand} className="rounded-2xl border border-mist bg-white p-6 sm:p-10">
             <p className="text-sm font-bold text-leaf">{c.category}</p>
             <h2 className="mt-1 font-display text-3xl font-bold">{c.brand}</h2>
             <div className="mt-8 grid gap-10 lg:grid-cols-3">

@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <section className="mx-auto grid max-w-6xl gap-12 px-5 pt-14 lg:grid-cols-[1fr_1.3fr]">
       <div>
-        <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Book a free call</h1>
+        <h1 className="font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.025em] sm:text-[3.2rem]">Book a free call</h1>
         <p className="mt-5 text-lg leading-relaxed text-ink-soft">
           Tell us a little about your idea. We&rsquo;ll reply on WhatsApp within one working day to set up a
           30-minute call.
@@ -25,7 +25,7 @@ export default function ContactPage() {
           <li>Whether it makes sense to start now, honestly</li>
         </ul>
       </div>
-      <div className="rounded-3xl border border-mist bg-white p-6 sm:p-8">
+      <div className="rounded-2xl border border-mist bg-white p-6 sm:p-8">
         <ContactForm />
       </div>
     </section>
