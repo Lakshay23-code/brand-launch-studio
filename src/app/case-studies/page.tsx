@@ -49,7 +49,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <section className="mx-auto max-w-6xl px-5 pb-12 pt-14">
-        <h1 className="max-w-3xl font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.025em] sm:text-[3.2rem]">
+        <h1 className="max-w-3xl font-display text-[2.4rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[3.2rem]">
           Brands we&rsquo;ve built and run
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
@@ -59,17 +59,17 @@ export default function CaseStudiesPage() {
 
       <section className="mx-auto max-w-6xl space-y-8 px-5">
         {caseStudies.map((c) => (
-          <article key={c.brand} className="rounded-2xl border border-mist bg-white p-6 sm:p-10">
-            <p className="text-sm font-bold text-leaf">{c.category}</p>
-            <h2 className="mt-1 font-display text-3xl font-bold">{c.brand}</h2>
+          <article key={c.brand} className="rounded-2xl border border-petal bg-white p-6 sm:p-10">
+            <p className="text-sm font-semibold text-leaf">{c.category}</p>
+            <h2 className="mt-1 font-display text-3xl font-medium">{c.brand}</h2>
             <div className="mt-8 grid gap-10 lg:grid-cols-3">
               <div>
-                <h3 className="font-display text-lg font-bold">The starting point</h3>
+                <h3 className="font-display text-lg font-medium">The starting point</h3>
                 <p className="mt-2 leading-relaxed text-ink-soft">{c.challenge}</p>
               </div>
               <div>
-                <h3 className="font-display text-lg font-bold">What we did</h3>
-                <ul className="mt-2 list-disc space-y-1 pl-5 text-ink-soft marker:text-saffron-deep">
+                <h3 className="font-display text-lg font-medium">What we did</h3>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-ink-soft marker:text-clay">
                   {c.whatWeDid.map((w) => (
                     <li key={w}>{w}</li>
                   ))}
@@ -77,9 +77,9 @@ export default function CaseStudiesPage() {
               </div>
               <dl className="space-y-4">
                 {c.results.map(([k, v]) => (
-                  <div key={k} className="border-l-4 border-saffron pl-4">
+                  <div key={k} className="border-l-4 border-rose pl-4">
                     <dt className="text-sm text-ink-soft">{k}</dt>
-                    <dd className="font-display text-2xl font-bold">{v}</dd>
+                    <dd className="font-display text-2xl font-medium">{v}</dd>
                   </div>
                 ))}
               </dl>

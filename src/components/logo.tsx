@@ -2,7 +2,7 @@
 // shelf, for the skincare, wellness and Ayurvedic brands we launch.
 // Drawn on a 64-unit grid; the tight viewBox below crops it to the artwork.
 
-const SAFFRON = "#E8A13A";
+const ROSE = "#D8A7A1";
 
 type MarkProps = {
   className?: string;
@@ -35,15 +35,15 @@ export function MarkArtwork({ color, cutout }: { color: string; cutout: string }
         strokeLinecap="round"
       />
       {/* shelf */}
-      <rect x="4" y="50" width="56" height="4" rx="2" fill={SAFFRON} />
+      <rect x="4" y="50" width="56" height="4" rx="2" fill={ROSE} />
     </>
   );
 }
 
 export function LogoMark({ className, tone = "ink", title }: MarkProps) {
-  const color = tone === "ink" ? "#141C3F" : "#FFFFFF";
+  const color = tone === "ink" ? "#2E2321" : "#FFFFFF";
   // The leaf's vein is drawn in the background colour.
-  const cutout = tone === "ink" ? "#F5F6F8" : "#141C3F";
+  const cutout = tone === "ink" ? "#FBF7F5" : "#2E2321";
   return (
     <svg
       viewBox="4 7 56 47"
@@ -62,7 +62,7 @@ export function Logo({ className = "", reversed = false }: { className?: string;
     <span className={`inline-flex items-end gap-2.5 ${className}`}>
       <LogoMark className="h-[34px] w-auto shrink-0" tone={reversed ? "white" : "ink"} />
       <span
-        className={`font-display text-[1.6rem] font-bold leading-[0.8] tracking-[-0.025em] ${
+        className={`font-display text-[1.6rem] font-medium leading-[0.8] tracking-[-0.02em] ${
           reversed ? "text-white" : "text-ink"
         }`}
       >

@@ -34,22 +34,22 @@ export function ContactForm() {
     window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
   }
 
-  const field = "mt-2 w-full rounded-xl border border-mist bg-paper px-4 py-3 text-ink";
+  const field = "mt-2 w-full rounded-xl border border-petal bg-paper px-4 py-3 text-ink";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
-        <label className="block text-sm font-bold">
+        <label className="block text-sm font-semibold">
           Your name
           <input name="name" autoComplete="name" required className={field} />
         </label>
-        <label className="block text-sm font-bold">
+        <label className="block text-sm font-semibold">
           Phone or WhatsApp number
           <input name="phone" type="tel" autoComplete="tel" required className={field} />
         </label>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
-        <label className="block text-sm font-bold">
+        <label className="block text-sm font-semibold">
           Product category
           <select name="category" className={field} defaultValue={categories[0]}>
             {categories.map((c) => (
@@ -57,7 +57,7 @@ export function ContactForm() {
             ))}
           </select>
         </label>
-        <label className="block text-sm font-bold">
+        <label className="block text-sm font-semibold">
           Budget to launch
           <select name="budget" className={field} defaultValue={budgets[4]}>
             {budgets.map((b) => (
@@ -66,17 +66,17 @@ export function ContactForm() {
           </select>
         </label>
       </div>
-      <label className="block text-sm font-bold">
+      <label className="block text-sm font-semibold">
         Your product idea <span className="font-normal text-ink-soft">(optional)</span>
         <textarea name="idea" rows={4} className={field} />
       </label>
       {error && (
-        <p role="alert" className="text-sm font-bold text-red-700">
+        <p role="alert" className="text-sm font-semibold text-red-700">
           {error}
         </p>
       )}
       <div className="flex flex-wrap items-center gap-4">
-        <button type="submit" className="rounded-lg bg-saffron px-6 py-3.5 font-bold text-ink hover:bg-saffron-deep hover:text-white">
+        <button type="submit" className="rounded-lg bg-rose px-6 py-3.5 font-semibold text-ink hover:bg-clay hover:text-white">
           Send on WhatsApp
         </button>
         <span className="text-sm text-ink-soft">

@@ -48,7 +48,7 @@ export default function ServicesPage() {
         }}
       />
       <section className="mx-auto max-w-6xl px-5 pb-12 pt-14">
-        <h1 className="max-w-3xl font-display text-[2.4rem] font-bold leading-[1.08] tracking-[-0.025em] sm:text-[3.2rem]">
+        <h1 className="max-w-3xl font-display text-[2.4rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[3.2rem]">
           From product idea to your first sales, in three stages
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
@@ -63,13 +63,13 @@ export default function ServicesPage() {
             <li
               key={s.slug}
               id={s.slug}
-              className="grid gap-6 rounded-2xl border border-mist bg-white p-6 sm:p-10 lg:grid-cols-[1fr_1.4fr]"
+              className="grid gap-6 rounded-2xl border border-petal bg-white p-6 sm:p-10 lg:grid-cols-[1fr_1.4fr]"
             >
               <div>
-                <p className="font-display text-sm font-bold text-saffron-deep">
+                <p className="font-display text-sm font-medium text-clay">
                   Stage {i + 1}, {s.weeks.toLowerCase()}
                 </p>
-                <h2 className="mt-2 font-display text-3xl font-bold">{s.name}</h2>
+                <h2 className="mt-2 font-display text-3xl font-medium">{s.name}</h2>
                 <p className="mt-3 leading-relaxed text-ink-soft">{s.summary}</p>
               </div>
               <ul className="space-y-3">
@@ -95,13 +95,13 @@ export default function ServicesPage() {
       </section>
 
       <section className="mx-auto max-w-3xl px-5 py-20">
-        <h2 className="font-display text-3xl font-bold tracking-tight">Common questions</h2>
-        <div className="mt-8 divide-y divide-mist border-y border-mist">
+        <h2 className="font-display text-3xl font-medium tracking-tight">Common questions</h2>
+        <div className="mt-8 divide-y divide-petal border-y border-petal">
           {faqs.map((f) => (
             <details key={f.q} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-bold">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-medium">
                 {f.q}
-                <span aria-hidden="true" className="text-2xl leading-none text-saffron-deep group-open:rotate-45 transition-transform">
+                <span aria-hidden="true" className="text-2xl leading-none text-clay group-open:rotate-45 transition-transform">
                   +
                 </span>
               </summary>

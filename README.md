@@ -46,9 +46,11 @@ manufacturer's factory or a client's product.
 - `shelfkar-logo-white.png`: full logo for dark backgrounds (transparent PNG)
 - `shelfkar-mark.svg` and `shelfkar-mark-white.svg`: the mark on its own, as vector files for Canva or a printer
 
-Brand colours: indigo `#141C3F`, saffron `#E8A13A`, leaf green `#2F6B4F`, mist `#DDE3EC`,
-background `#F5F6F8`. Fonts: Bricolage Grotesque (headings and logo) and Atkinson Hyperlegible
-(body text), both free on Google Fonts.
+Brand colours (Blush & Cocoa): cocoa `#2E2321` (text, buttons, footer), blush white `#FBF7F5`
+(page background), dusty rose `#D8A7A1` (the accent and the logo's shelf), soft rose `#F4E7E3`
+(tinted panels), clay `#A0625C` (small accents), sage `#6F8F7A` (ticks), petal `#EFE3DF` (borders).
+Fonts: Fraunces (headings and logo) and DM Sans (body text), both free on Google Fonts.
+The colours live in `src/app/globals.css`.
 
 ## Add a blog post
 

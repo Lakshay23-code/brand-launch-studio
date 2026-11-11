@@ -2,25 +2,29 @@
 @plugin "@tailwindcss/typography";
 
 /*
-  Palette: pharmaceutical indigo + saffron, on a cool lab white.
-  ink     #141C3F  text, primary surfaces
-  paper   #F5F6F8  page background
-  saffron #E8A13A  the one accent (calls to action, the label band)
-  leaf    #2F6B4F  secondary, used for "verified" and success states
-  mist    #DDE3EC  rules, quiet fills
+  Shelfkar palette: Blush & Cocoa
+  ink        #2E2321  cocoa: text, buttons, footer
+  ink-soft   #6E5E59  secondary text
+  paper      #FBF7F5  page background (blush white)
+  rose       #D8A7A1  the accent: logo shelf, label bands, highlights
+  rose-soft  #F4E7E3  tinted panels
+  clay       #A0625C  small accent text (step numbers, links on hover)
+  leaf       #6F8F7A  sage green, for "checked" and success states
+  petal      #EFE3DF  borders and dividers; light text on cocoa
 */
 
 @theme inline {
-  --color-ink: #141c3f;
-  --color-ink-soft: #3c4570;
-  --color-paper: #f5f6f8;
-  --color-saffron: #e8a13a;
-  --color-saffron-deep: #b9761a;
-  --color-leaf: #2f6b4f;
-  --color-mist: #dde3ec;
+  --color-ink: #2e2321;
+  --color-ink-soft: #6e5e59;
+  --color-paper: #fbf7f5;
+  --color-rose: #d8a7a1;
+  --color-rose-soft: #f4e7e3;
+  --color-clay: #a0625c;
+  --color-leaf: #6f8f7a;
+  --color-petal: #efe3df;
   --color-white: #ffffff;
-  --font-display: var(--font-bricolage);
-  --font-sans: var(--font-atkinson);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-dmsans);
 }
 
 html {
@@ -42,11 +46,17 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-ink);
-  font-family: var(--font-atkinson), system-ui, sans-serif;
+  font-family: var(--font-dmsans), system-ui, sans-serif;
+}
+
+/* Fraunces reads best with its optical sizes on and a soft, upright cut. */
+.font-display {
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 50, "WONK" 0;
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-saffron);
+  outline: 2px solid var(--color-clay);
   outline-offset: 2px;
 }
 
@@ -55,14 +65,16 @@ body {
   --tw-prose-headings: var(--color-ink);
   --tw-prose-links: var(--color-ink);
   --tw-prose-bold: var(--color-ink);
-  --tw-prose-bullets: var(--color-saffron-deep);
-  --tw-prose-counters: var(--color-saffron-deep);
-  --tw-prose-hr: var(--color-mist);
-  --tw-prose-th-borders: var(--color-mist);
-  --tw-prose-td-borders: var(--color-mist);
+  --tw-prose-bullets: var(--color-rose);
+  --tw-prose-counters: var(--color-clay);
+  --tw-prose-hr: var(--color-petal);
+  --tw-prose-th-borders: var(--color-petal);
+  --tw-prose-td-borders: var(--color-petal);
 }
 
 .prose :where(h2, h3) {
-  font-family: var(--font-bricolage);
+  font-family: var(--font-fraunces);
+  font-weight: 500;
   letter-spacing: -0.01em;
+  font-variation-settings: "SOFT" 50, "WONK" 0;
 }

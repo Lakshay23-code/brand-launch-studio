@@ -4,7 +4,7 @@ import { nav, site } from "@/site.config";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 bg-ink text-mist">
+    <footer className="mt-24 bg-ink text-petal">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-3">
         <div>
           <Logo reversed />
@@ -17,7 +17,7 @@ export function SiteFooter() {
           )}
         </div>
         <nav aria-label="Footer">
-          <p className="text-sm font-bold text-white">Pages</p>
+          <p className="text-sm font-semibold text-white">Pages</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
               <Link href="/" className="hover:text-white">
@@ -34,7 +34,7 @@ export function SiteFooter() {
           </ul>
         </nav>
         <div>
-          <p className="text-sm font-bold text-white">Get in touch</p>
+          <p className="text-sm font-semibold text-white">Get in touch</p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
               <a href={`mailto:${site.email}`} className="hover:text-white">
@@ -56,7 +56,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <p className="border-t border-white/10 px-5 py-5 text-center text-xs text-mist/70">
+      <p className="border-t border-white/10 px-5 py-5 text-center text-xs text-petal/70">
         Product claims on client brands follow FSSAI, AYUSH and cosmetic labelling rules. We do not market
         prescription medicines.
       </p>

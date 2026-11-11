@@ -8,19 +8,18 @@ import { JsonLd } from "@/components/json-ld";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 
 // Fonts are self-hosted from src/fonts (both are open-source, SIL Open Font Licence).
-const bricolage = localFont({
-  src: "../fonts/bricolage-grotesque-latin-wght-normal.woff2",
-  variable: "--font-bricolage",
-  weight: "200 800",
+// Fraunces: a soft serif for headings and the logo. DM Sans: a clean sans for text.
+const fraunces = localFont({
+  src: "../fonts/fraunces-latin-full-normal.woff2",
+  variable: "--font-fraunces",
+  weight: "100 900",
   display: "swap",
 });
 
-const atkinson = localFont({
-  src: [
-    { path: "../fonts/atkinson-hyperlegible-latin-400-normal.woff2", weight: "400", style: "normal" },
-    { path: "../fonts/atkinson-hyperlegible-latin-700-normal.woff2", weight: "700", style: "normal" },
-  ],
-  variable: "--font-atkinson",
+const dmSans = localFont({
+  src: "../fonts/dm-sans-latin-wght-normal.woff2",
+  variable: "--font-dmsans",
+  weight: "100 1000",
   display: "swap",
 });
 
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-IN" className={`${bricolage.variable} ${atkinson.variable} h-full antialiased`}>
+    <html lang="en-IN" className={`${fraunces.variable} ${dmSans.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <JsonLd
           data={{
